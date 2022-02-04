@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- configuração padrão html5 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- título e logo da aba do navegador -->
+    <title>Calculadora IMC</title>
+    <link rel="icon" href="./img/favicon.ico"> 
+
+    <!-- inclusão de arquivo css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fonte de texto externa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- cabeçalho -->
+    <header class="cabecalho">
+        <h1>Calculadora IMC</h1>
+        <h4>Para calcular seu IMC, preencha as informações a seguir: </h4>
+    </header>
+
+    <!-- conteudo principal -->
+    <main>
+        <section class="container">
+
+            <!-- imagem -->
+            <div class="imagem">
+                <img src="./img/imagem.jpg" alt="Desenho de Pessoas Saudáveis">
+            </div>
+    
+            <!-- calculadora imc -->
+            <div class="calculadora">
+                <div class="card">
+                    <div class="form" >
+
+                        <!-- campos da calculadora -->
+                        <label for="genero">Gênero:</label>
+                        <select name="genero" id="genero">
+                            <option name="selecione" value="selecione" id="selecione">Selecione</option>
+                            <option name="masculino" value="masculino" id="masculino" required>Masculino</option>
+                            <option name="feminino" value="feminino" id="feminino" required>Feminino</option>
+                          </select>
+
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" name="peso" id="peso">
+    
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" name="altura" id="altura">
+    
+                        <label for="resultado">Resultado (imc):</label>
+                        <input disabled type="text" name="resultado" id="resultado">
+
+                        <!-- botão calcular que solicita a função do javascript -->
+                        <button name="button" id="button" onclick="calculaIMC()">Calcular</button>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- rodapé -->
+    <footer class="rodape">
+        <p>Desenvolvido por Power TI</p>
+    </footer>
+    
+    <!-- inclusão de arquivo javascript -->
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* remove margens e define a fonte da página */
+* {
+    font-family: 'Sansita', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* define as características do corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* estilo do cabeçalho */
+.cabecalho {
+    top: 0;
+    position: fixed;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cabecalho h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #fdb137;
+}
+
+.cabecalho h4 {
+    color: #57575c;
+}
+
+/* define as características do container */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* estilo da imagem */
+.imagem img {
+    width: 370px;
+    height: auto;
+}
+
+/* estilo da calculadora */
+.container .calculadora {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container .calculadora .form label {
+    color:  #434cc1;
+    font-weight:600;
+}
+
+.container .calculadora .form input, select {
+    padding-left: 5px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #434cc1;
+    width: 220px;
+    height: 25px;
+}
+
+.container .calculadora .form #resultado {
+    font-weight: bold;
+}
+
+.container .calculadora .form select {
+    width: 227px;
+    height: 27px;
+}
+
+.container .calculadora .form button {
+    font-size: 17px;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #fdb137;
+    color: rgb(255, 255, 255);
+    background-color: #fdb137;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .calculadora .form button:hover {
+    background-color: #d89830;
+    border: 1px solid #d89830;
+}
+
+
+/* estilo do rodapé */
+.rodape {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* media query (adaptação do layout para determinados tamanhos de telas) */
+@media screen and (max-width: 700px) {
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .cabecalho {
+        top: 20px;
+        position: relative;
+    }
+
+    .cabecalho h4 {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imagem img {
+        width: 220px;
+    }
+
+    .rodape {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+}
